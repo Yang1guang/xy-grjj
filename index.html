@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <!-- 锁定视口，防止移动端双击放大导致界面错位 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#050505" />
+    <meta name="description" content="专属云端矩阵 | 高级个人主页" />
+    
+    <!-- 商业级社交分享卡片支持 (Open Graph) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="专属极速云端节点" />
+    <meta property="og:description" content="基于安全极速云架构构建的下一代矩阵空间" />
+    
+    <title>专属云端矩阵</title>
+
+    <style>
+      /* 终极防白屏：React 引擎接管前的极客风加载动画 */
+      body { margin: 0; background-color: #050505; display: flex; justify-content: center; align-items: center; height: 100vh; overflow: hidden; }
+      .loader-wrapper { display: flex; flex-direction: column; align-items: center; gap: 1rem; }
+      .loader { width: 48px; height: 48px; border: 3px solid rgba(255,255,255,0.05); border-radius: 50%; border-top-color: #a855f7; animation: spin 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite; }
+      .loader-text { color: rgba(255,255,255,0.4); font-family: sans-serif; font-size: 12px; letter-spacing: 2px; }
+      @keyframes spin { to { transform: rotate(360deg); } }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <!-- 页面挂载前显示，挂载后 React 会自动抹除此处内容 -->
+      <div class="loader-wrapper">
+        <div class="loader"></div>
+        <div class="loader-text">INITIALIZING ENGINE...</div>
+      </div>
+    </div>
+    <!-- Vite 核心构建入口 -->
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
